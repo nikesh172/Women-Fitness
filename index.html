@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CycleCare - Menstrual Cycle Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>CycleCare</h1>
+      <nav>
+        <button id="toggleLanguage">भाषा</button>
+        <button id="discreetModeToggle">Discreet Mode</button>
+      </nav>
+    </header>
+    
+    <!-- Discreet Mode Password Modal -->
+    <div id="discreetModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Enter Password</h2>
+        <input type="password" id="discreetPassword" placeholder="Enter password">
+        <button id="discreetSubmit">Submit</button>
+      </div>
+    </div>
+    
+    <main>
+      <!-- Cycle Logging Section -->
+      <section id="cycleLogging">
+        <h2>Log Your Cycle</h2>
+        <form id="cycleForm">
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" required>
+          
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" required>
+          
+          <button type="submit">Log Cycle</button>
+        </form>
+        <div id="cycleList">
+          <!-- Cycle logs will appear here -->
+        </div>
+      </section>
+      
+      <!-- Predictions & Insights Section -->
+      <section id="predictions">
+        <h2>Predictions & Insights</h2>
+        <div id="predictionOutput">
+          <!-- Prediction results will be displayed here -->
+        </div>
+      </section>
+      
+      <!-- Health Status Indicators Section -->
+      <section id="healthIndicators">
+        <h2>Health Status</h2>
+        <div id="healthOutput">
+          <!-- Health indicators based on WHO standards -->
+        </div>
+      </section>
+      
+      <!-- Ayurvedic Remedies & Yoga Poses Section -->
+      <section id="ayurvedicTips">
+        <h2>Ayurvedic Remedies & Yoga Poses</h2>
+        <div id="remedyOutput">
+          <!-- Remedies and yoga pose suggestions -->
+        </div>
+      </section>
+      
+      <!-- Resources Section -->
+      <section id="resources">
+        <h2>Resources</h2>
+        <div id="clinicMap">
+          <!-- OpenStreetMap integration for nearby clinics -->
+          <!-- (For production, integrate Leaflet or an embedded OSM iframe) -->
+        </div>
+        <div id="meditationGuides">
+          <h3>Meditation Guides</h3>
+          <!-- YouTube Audio Library integration for meditation guides -->
+          <iframe width="300" height="200" src="https://www.youtube.com/embed/VIDEO_ID" title="Meditation Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      
+      <!-- Community Forum Section -->
+      <section id="communityForum">
+        <h2>Community Forum</h2>
+        <div id="forumPosts">
+          <!-- Forum posts will appear here -->
+        </div>
+        <form id="forumForm">
+          <textarea id="forumMessage" placeholder="Share your thoughts..." required></textarea>
+          <button type="submit">Post Anonymously</button>
+        </form>
+      </section>
+      
+      <!-- Government Alerts Section -->
+      <section id="govAlerts">
+        <h2>Government Alerts</h2>
+        <div id="alertsOutput">
+          <p>Check out the latest government menstrual health initiatives <a href="https://www.example.gov.in" target="_blank">here</a>.</p>
+        </div>
+      </section>
+      
+      <!-- Premium Consultation Section -->
+      <section id="premium">
+        <h2>Premium Ayurvedic Consultation</h2>
+        <button id="premiumBooking">Book Now</button>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 CycleCare. Empowering Indian women with holistic menstrual health insights.</p>
+    </footer>
+  </div>
+</body>
+</html>
